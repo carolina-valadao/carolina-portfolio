@@ -1,0 +1,192 @@
+.outro-1 {
+    position: relative;
+    @include primaryText;
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+
+    & p {
+        font-family: "RecoletaAlt", serif;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    @media (min-width: 768px) {
+        & p {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    &__cat {
+        position: absolute;
+        opacity: 0;
+
+        &--1 {
+            background-image: url(../../images/cat-1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 104px;
+            width: 105px;
+            top: 22%;
+            left: 15%;
+
+            @media (min-width: 768px) {
+                height: 140px;
+                width: 141px;
+            }
+
+            &--dark {
+                background-image: url(../../images/cat-1-dark.png);
+            }
+        }
+        &--2 {
+            background-image: url(../../images/cat-2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 113px;
+            width: 107px;
+            bottom: 12%;
+            left: 18%;
+
+            @media (min-width: 768px) {
+                height: 152px;
+                width: 145px;
+            }
+
+            &--dark {
+                background-image: url(../../images/cat-2-dark.png);
+            }
+        }
+        &--3 {
+            background-image: url(../../images/cat-3.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 107px;
+            width: 95px;
+            bottom: 22%;
+            right: 18%;
+
+            @media (min-width: 768px) {
+                height: 154px;
+                width: 143px;
+            }
+
+            &--dark {
+                background-image: url(../../images/cat-3-dark.png);
+            }
+        }
+        &--4 {
+            background-image: url(../../images/cat-4.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 114px;
+            width: 106px;
+            top: 10%;
+            right: 12%;
+
+            @media (min-width: 768px) {
+                height: 154px;
+                width: 140px;
+            }
+
+            &--dark {
+                background-image: url(../../images/cat-4-dark.png);
+            }
+        }
+    }
+}
+
+.outro-2 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+
+    &__cta {
+        @include primaryTextBp1;
+        background-color: $color-white;
+        color: $color-dark-blue;
+        width: fit-content;
+        padding: 14px 24px;
+        border-radius: 6px;
+        border: 3px solid $color-dark-blue;
+        transition: all .5s;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-cta;
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (min-width: 768px) {
+            @include primaryText;
+            padding: 18px 25px;
+        }
+
+        &--dark {
+            background-color: transparent;
+            color: $color-cta;
+            border-color: $color-cta;
+
+            &:hover {
+                background-color: rgba($color-cta, .2);
+            }
+        }
+    }
+
+    &__cat {
+        width: 276px;
+        height: 312px;
+        background-image: url('../images/outro-2-cat.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 72px 0 0;
+
+        @media (min-width: 768px) {
+            width: 346px;
+            height: 391px;
+        }
+
+        &--dark {
+            background-image: url('../images/outro-2-cat-dark.png');
+        }
+    }
+}
+
+.outro-2__wrapper:hover  .outro-2__cat:not(:hover){
+    background-image: url('../images/outro-2-cat-hover.png');
+    width: 276px;
+    height: 312px;
+
+    @media (min-width: 768px) {
+        width: 346px;
+        height: 391px;
+    }
+}
+
+.outro-2__wrapper:hover  .outro-2__cat--dark:not(:hover){
+    background-image: url('../images/outro-2-cat-hover-dark.png');
+    width: 276px;
+    height: 312px;
+
+    @media (min-width: 768px) {
+        width: 346px;
+        height: 391px;
+    }
+}

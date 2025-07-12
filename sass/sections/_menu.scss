@@ -1,0 +1,80 @@
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background-color: $color-white;
+    justify-content: center;
+    vertical-align: middle;
+    z-index: 100;
+
+    &--dark {
+        background-color: $color-mid-dark-blue;
+    }
+
+    &__closeBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(../../images/close.png);
+        background-size: contain;
+        height: 50px;
+        width: 50px;
+        margin: 40px 32px;
+        cursor: pointer;
+
+        @media (min-width: 768px) {
+            margin: 40px;
+        }
+
+        &--dark {
+            background-image: url(../../images/close-dark.png);
+        }
+    }
+
+    &--open {
+        display: flex;
+    }
+
+    &__itemList {
+        align-self: center;
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        font-family: RecoletaAltMedium;
+        font-size: 34px;
+        line-height: 40px;
+        color: $color-mid-light-blue;
+        cursor: pointer;
+
+        & a,
+        & a:active,
+        & a:visited {
+            text-decoration: none;
+            color: $color-mid-light-blue;
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 48px;
+            line-height: 62px;
+        }
+
+        &--dark {
+            color: $color-cta;
+
+            & a,
+            & a:active,
+            & a:visited {
+                color: $color-cta;
+            }
+        }
+    }
+}

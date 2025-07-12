@@ -1,0 +1,103 @@
+.about {
+    font-family: "RecoletaAlt", serif;
+    position: relative;
+    min-height: 100vh;
+    margin: 0 auto;
+    align-content: center;
+
+    &__wrapper { 
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 784px;
+    }
+
+    &__tabs {
+        font-family: "RecoletaAltMedium", serif;
+        height: 26px;
+        font-size: 16px;
+        line-height: 26px;
+        list-style: none;
+        display: flex;
+        margin:0 0 20px;
+        overflow:scroll;
+        scrollbar-width: none;
+
+        @media (min-width: 768px) {
+            margin:0 auto 20px;
+        }
+
+        & li {
+            &:nth-child(2) {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    &__faded {
+        position: absolute;
+        height: 26px;
+        width: 20px;
+
+        &--start {
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(to left, rgba($color-light-blue, .4), rgba($color-light-blue, 1));
+        }
+
+        &--end {
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to right, rgba($color-light-blue, .4), rgba($color-light-blue, 1));
+        }
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__link {
+        @include unbuttonize;
+        text-decoration: none;
+        white-space: nowrap;
+        color: $color-tabs;
+        margin-right: 26px;
+        transition: color .2s ease-in;
+        cursor: pointer;
+        
+        &:hover {
+            color: $color-dark-blue;
+        }
+
+        &--active {
+            text-decoration: none;
+            color: $color-dark-blue;
+        }
+
+        &--dark {
+            color: $color-tabs-dark;
+
+            &:hover {
+                color: $color-cta;
+            }
+        }
+    }
+
+    .about__link--active.about__link--dark {
+        color: $color-cta;
+    }
+
+    &__content {
+        min-height: 225px;
+        margin: 0 20px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 32px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+}

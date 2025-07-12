@@ -1,0 +1,97 @@
+.outer-main {
+    height: 290vh;
+}
+
+.main {
+    height: 100vh;
+    position: sticky;
+    display: flex;
+    top: 0;
+
+    &__header {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin: 30px 16px;
+        width: 100px;
+        height: 24px;
+        background-image: url(../images/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (min-width: 768px) {
+            margin: 60px;
+            width: 148px;
+            height: 35px;
+        }
+
+        &--dark {
+            background-image: url(../images/logo-dark.png);
+        }
+    }
+
+    &__hamburgerBtn {
+        margin: 24px 16px;
+        width: 32px;
+        height: 32px;
+        background-image: url(../images/hamburger.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        &--dark {
+            background-image: url(../images/hamburger-dark.png);
+        }
+    }
+    
+    &__menuBtn {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            @include unbuttonize;
+            color: $color-mid-light-blue;
+            font-family: "RecoletaAlt", serif;
+            font-size: 30px;
+            line-height: 26px;
+            cursor: pointer;
+            margin: 60px;
+        }
+
+        &--dark {
+            color: $color-cta;
+        }
+    }
+
+    &__animationContainer {
+        align-self: center;
+        margin: 0 auto;
+        padding-top: 135px;
+        width: fit-content;
+
+        @media (min-width: 768px) {
+            padding-top: 175px;
+        }
+    }
+
+    &__cat {
+        display: block;
+        width: 320px;
+        height: 467px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (min-width: 768px) { 
+            width: 466px;
+            height: 864px;
+        }
+    }
+}

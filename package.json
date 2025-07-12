@@ -1,0 +1,24 @@
+{
+  "name": "carolina-ux",
+  "version": "1.0.0",
+  "description": "Carolina Valadão digital CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass sass/main.scss styles/style.css --watch",
+    "build" : "rm -rf ./public && mkdir ./public && cp -r ./index.html ./styles ./index.js ./fonts ./images ./public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelopes07/carolina-ux.git"
+  },
+  "author": "André Lopes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrelopes07/carolina-ux/issues"
+  },
+  "homepage": "https://github.com/andrelopes07/carolina-ux#readme",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}

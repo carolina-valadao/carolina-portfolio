@@ -1,0 +1,31 @@
+@font-face {
+    font-family: RecoletaAlt;
+    src: url(../fonts/Recoleta_Alt_Regular.otf);
+}
+
+@font-face {
+    font-family: RecoletaAltMedium;
+    src: url(../fonts/Recoleta_Alt_Medium.otf);
+}
+
+@font-face {
+    font-family: RecoletaAltSemiBold;
+    src: url(../fonts/Recoleta_Alt_SemiBold.otf);
+}
+
+@font-face {
+    font-family: RecoletaAltBold;
+    src: url(../fonts/Recoleta_Alt_Bold.otf);
+}
+
+@mixin primaryText {
+    font-family: "RecoletaAlt", serif;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+@mixin primaryTextBp1 {
+    font-family: "RecoletaAlt", serif;
+    font-size: 20px;
+    line-height: 32px;
+}

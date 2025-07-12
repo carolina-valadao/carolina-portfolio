@@ -1,0 +1,25 @@
+$color-white: #FEFFFD;
+$color-black: #212121;
+$color-gray: #989898;
+
+$color-dark-blue: #01104C;
+$color-mid-dark-blue: #19308F;
+$color-mid-light-blue: #305CE2;
+$color-light-blue: #7A9DF6;
+
+$color-dark-mode-bg: #08102F;
+
+$color-cta: #CAD9FF;
+$color-tabs: #4C5FAB;
+$color-tabs-dark: #6B81B8;
+
+@mixin unbuttonize {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+}

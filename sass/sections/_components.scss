@@ -1,0 +1,33 @@
+.colourScheme {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    bottom: 40px;
+    left: 26px;
+    z-index: 1000;
+
+    @media (min-width: 768px) { 
+        bottom: 60px;
+        left: 60px;
+    }
+
+    &__toggle {
+        @include unbuttonize;
+        cursor: pointer;
+        background-image: url(../../images/icon-dark-mode.png);
+        background-size: contain;
+        bottom: 40px;
+        left: 26px;
+        height: 50px;
+        width: 50px;
+
+        @media (min-width: 768px) { 
+            bottom: 60px;
+            left: 60px;
+        }
+
+        &--dark {
+            background-image: url(../../images/icon-light-mode.png);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.process {
+    height: 400vh;
+
+    & p {
+        @include primaryTextBp1;
+        height: 100vh;
+        max-width: 714px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        vertical-align: middle;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            @include primaryText;
+        }
+    }
+}
